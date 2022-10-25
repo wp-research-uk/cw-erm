@@ -105,6 +105,9 @@ rm -R _site/
 # Create `.nojekyll` file (bypass GitHub Pages Jekyll processing)
 touch .nojekyll
 
+# Move CW-ERM page to index
+mv cw-erm/blog/2022/cw-erm/index.html .
+
 # Push to DEPLOY_BRANCH
 git add -fA
 git commit --allow-empty -m "$(git log -1 --pretty=%B) [ci skip]"
